@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailComponent } from './detail/detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TeamTileComponent } from './team-tile/team-tile.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     DetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    TeamTileComponent,
+    AboutComponent
   ],
   imports: [
     AlertModule.forRoot(),
