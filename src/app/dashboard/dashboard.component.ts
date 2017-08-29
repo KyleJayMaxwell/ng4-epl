@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NgFor } from '@angular/common';
+
+import { TeamService } from '../team.service';
+
+import { TeamInfo } from '../team-tile/team-tile.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private teamService:TeamService) { }
+
+  private englishTeams:TeamInfo[];
 
   ngOnInit() {
+    this.englishTeams = this.teamService.getEnglishStream();
   }
 
 }

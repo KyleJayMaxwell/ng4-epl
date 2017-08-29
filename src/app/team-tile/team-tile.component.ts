@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TeamInfo } from './team-tile.model';
 
 @Component({
   selector: 'app-team-tile',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team-tile.component.css']
 })
 export class TeamTileComponent implements OnInit {
+
+  @Input() teamData: TeamInfo;
 
   constructor() { }
 

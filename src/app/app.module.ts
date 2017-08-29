@@ -12,6 +12,8 @@ import { DetailComponent } from './detail/detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TeamTileComponent } from './team-tile/team-tile.component';
 import { AboutComponent } from './about/about.component';
+import { TeamService } from './team.service';
+import { TextLimitPipe } from './text-limit.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { AboutComponent } from './about/about.component';
     DetailComponent,
     DashboardComponent,
     TeamTileComponent,
-    AboutComponent
+    AboutComponent,
+    TextLimitPipe
   ],
   imports: [
     AlertModule.forRoot(),
@@ -30,7 +33,9 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    TeamService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

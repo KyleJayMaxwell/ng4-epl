@@ -7,4 +7,5 @@ export interface TeamInfo {
   leagueTitles: number;
   description: string;
   crest: string;
+  abbreviation: string;
 }

@@ -1,15 +1,5 @@
 <div class="container">
-  <div class="col-md-4">
-      <app-team-tile></app-team-tile>
-  </div>
-  <div class="col-md-4">
-      <app-team-tile></app-team-tile>
-  </div>
-  <div class="col-md-4">
-      <app-team-tile></app-team-tile>
-  </div>
-
-  <div class="col-md-4">
-      <app-team-tile></app-team-tile>
+  <div class="col-md-6 center" *ngFor="let team of englishTeams">
+      <app-team-tile [teamData]="team"></app-team-tile>
   </div>
 </div>
