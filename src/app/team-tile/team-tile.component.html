@@ -1,8 +1,8 @@
 <div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="..." alt="{{ teamData.name }} Image">
+  <img class="card-img-top" src="../../assets/{{teamData.crest}}" alt="{{ teamData.name }} Image">
   <div class="card-block">
     <h4 class="card-title">{{ teamData.name }} </h4>
-    <p class="card-text">{{ teamData.description | textLimit: 100 }}</p>
-    <a href="#" class="btn btn-primary">{{ teamData.abbreviation }}  Details</a>
+    <p class="card-text">{{ teamData.description | textLimit: 75 }}</p>
+    <a (click)="onSelect(teamData)" class="btn btn-primary">{{ teamData.abbreviation }}  Details</a>
   </div>
 </div>

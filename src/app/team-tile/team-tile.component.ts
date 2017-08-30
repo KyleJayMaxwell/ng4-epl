@@ -8,6 +8,12 @@ import { TeamInfo } from './team-tile.model';
 })
 export class TeamTileComponent implements OnInit {
 
+  selectedTeam: TeamInfo;
+
+  onSelect(team: TeamInfo): void {
+    this.selectedTeam = team;
+    console.log(this.selectedTeam);
+  }
   @Input() teamData: TeamInfo;
 
   constructor() { }
