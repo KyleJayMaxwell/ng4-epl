@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TeamInfo } from './team-tile.model';
+import { TeamService } from '../team.service';
 
 @Component({
   selector: 'app-team-tile',
@@ -8,17 +9,15 @@ import { TeamInfo } from './team-tile.model';
 })
 export class TeamTileComponent implements OnInit {
 
-  selectedTeam: TeamInfo;
-
-  onSelect(team: TeamInfo): void {
-    this.selectedTeam = team;
-    console.log(this.selectedTeam);
-  }
   @Input() teamData: TeamInfo;
 
-  constructor() { }
+
+  constructor(private teamService:TeamService) { }
 
   ngOnInit() {
   }
 
+  selectTeam(team: TeamInfo): void {
+    this.teamService.onSelect(team);
+  }
 }

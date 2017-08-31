@@ -3,6 +3,6 @@
   <div class="card-block">
     <h4 class="card-title">{{ teamData.name }} </h4>
     <p class="card-text">{{ teamData.description | textLimit: 75 }}</p>
-    <a (click)="onSelect(teamData)" class="btn btn-primary">{{ teamData.abbreviation }}  Details</a>
+    <a (click)="selectTeam(teamData)" class="btn btn-primary">{{ teamData.abbreviation }}  Details</a>
   </div>
 </div>

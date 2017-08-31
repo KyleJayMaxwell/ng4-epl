@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
 import { TeamInfo } from './team-tile/team-tile.model';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class TeamService {
+
+  private selectedTeam = new BehaviorSubject<TeamInfo>({ id: 0 });
+  currentTeam = this.selectedTeam.asObservable();
+
   constructor() { }
+
+    public onSelect(team: TeamInfo): void {
+      this.selectedTeam.next(team);
+      console.log(team);
+    }
 
     public getEnglishStream(): TeamInfo[] {
       return this.getMockEnglishLeague();
